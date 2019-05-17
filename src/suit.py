@@ -11,15 +11,17 @@ class Suit(Enum):
         return self.color
 
     @staticmethod
-    def initial(char):
+    def find(char):
         if char.lower() == 'h':
             return Suit.HEARTS
-        if char.lower() == 'd':
+        elif char.lower() == 'd':
             return Suit.DIAMONDS
-        if char.lower() == 'c':
+        elif char.lower() == 'c':
             return Suit.CLOVERS
-        if char.lower() == 'p':
+        elif char.lower() == 'p':
             return Suit.PIKES
+        else:
+            return None
 
     @staticmethod
     def initials():

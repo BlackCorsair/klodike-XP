@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class Number(Enum):
-    ONE = 1
+    ACE = 1
     TWO = 2
     THREE = 3
     FOUR = 4
@@ -12,6 +12,6 @@ class Number(Enum):
     EIGHT = 8
     NINE = 9
     TEN = 10
-    JACK = 'j'
-    QUEEN = 'q'
-    KING = 'k'
+    JACK = 11
+    QUEEN = 12
+    KING = 13

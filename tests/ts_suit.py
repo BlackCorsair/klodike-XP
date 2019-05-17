@@ -8,8 +8,11 @@ class TestSuit(unittest.TestCase):
         self.suitSut = Suit.HEARTS
         self.suitSut.color = Color.BLACK
 
-    def testInitialHearts(self):
-        self.assertEqual(Suit.initial('H'), Suit.HEARTS)
+    def testFindHearts(self):
+        self.assertEqual(Suit.find('H'), Suit.HEARTS)
+
+    def testFindNonPossible(self):
+        self.assertIsNone(Suit.find('Ñ'))
 
     def testInitials(self):
         self.assertEqual(Suit.initials(), ['h', 'd', 'c', 'p'])
