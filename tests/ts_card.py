@@ -5,11 +5,43 @@ from color import Color
 from number import Number
 
 
+class CardBuilder():
+    def __init__(self):
+        self.suit = Suit.CLOVERS
+        self.suit.color = Color.BLACK
+        self.number = Number.TWO
+        self.facedUp = False
+
+    def setColor(self, color):
+        self.suit.color = color
+        return self
+
+    def setSuit(self, suit):
+        self.suit = suit
+        return self
+
+    def setNumber(self, number):
+        self.number = number
+        return self
+
+    def setFaceUp(self):
+        self.facedUp = True
+        return self
+
+    def build(self):
+        if self.facedUp:
+            builded = Card(self.suit, self.number)
+            builded.facedUp = self.facedUp
+            return builded
+        return Card(self.suit, self.number)
+
+
 class TestCard(unittest.TestCase):
     def setUp(self):
-        self.suitDOC = Suit.CLOVERS
-        self.suitDOC.color = Color.BLACK
-        self.cardSUT = Card(self.suitDOC, Number.TWO)
+        self.cardSUT = CardBuilder().build()
+
+    def tearDown(self):
+        self.cardSUT = None
 
     def testFlipChangesFacedUp(self):
         previous = self.cardSUT.isFacedUp()
@@ -17,19 +49,19 @@ class TestCard(unittest.TestCase):
 
     def testIsNextToCardTruePlus1(self):
         self.assertTrue(self.cardSUT.isNextToCard(
-            Card(self.suitDOC, Number.THREE)))
+            CardBuilder().setNumber(Number.THREE).build()))
 
     def testIsNextToCardTrueLess1(self):
         self.assertTrue(self.cardSUT.isNextToCard(
-            Card(self.suitDOC, Number.ACE)))
+            CardBuilder().setNumber(Number.ACE).build()))
 
     def testIsNextToCardTrueEquals(self):
         self.assertTrue(self.cardSUT.isNextToCard(
-            Card(self.suitDOC, Number.TWO)))
+            CardBuilder().setNumber(Number.TWO).build()))
 
     def testIsNextToCardFalse(self):
         self.assertFalse(self.cardSUT.isNextToCard(
-            Card(self.suitDOC, Number.FOUR)))
+            CardBuilder().setNumber(Number.FOUR).build()))
 
     def testIsNextToCardNonPossible(self):
         self.assertIsNone(self.cardSUT.isNextToCard(1))
