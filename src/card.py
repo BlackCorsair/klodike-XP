@@ -1,4 +1,3 @@
-
 class Card():
     def __init__(self, suit, number):
         self.suit = suit
@@ -31,6 +30,9 @@ class Card():
 
     def getColor(self):
         return self.suit.getColor()
+
+    def getNumber(self):
+        return self.number
 
     def getSuit(self):
         return self.suit
