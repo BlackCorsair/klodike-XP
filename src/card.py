@@ -31,3 +31,6 @@ class Card():
 
     def getColor(self):
         return self.suit.getColor()
+
+    def getSuit(self):
+        return self.suit

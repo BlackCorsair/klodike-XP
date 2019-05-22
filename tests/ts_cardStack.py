@@ -34,4 +34,3 @@ class TestCardStack(unittest.TestCase):
         self.stack.push(CardBuilder().build())
         self.assertEqual(type(CardBuilder().setFaceUp().build()),
                          type(self.stack.pop()))
-
