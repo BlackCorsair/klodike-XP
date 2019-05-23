@@ -5,5 +5,5 @@ setup(name='klondike',
       description='klondike for XP',
       py_module=['color', 'number', 'suit', 'card',
                  'cardStack', 'foundation', 'pile',
-                 'stock'],
+                 'stock', 'error'],
       )
