@@ -3,9 +3,10 @@ from cardStack import CardStack
 
 class Stock(CardStack):
     def __init__(self):
-        CardStack().__init__()
+        super().__init__()
 
     def takeTop(self, quantity):
         cards = []
-        while(not self.empty()):
-            cards.insert(self.pop())
+        while(not self.empty() and len(cards) != quantity):
+            cards.append(self.pop())
+        return cards
