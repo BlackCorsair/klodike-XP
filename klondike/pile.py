@@ -1,5 +1,5 @@
-from cardStack import CardStack
-from number import Number
+from klondike.cardStack import CardStack
+from klondike.number import Number
 
 
 class Pile(CardStack):

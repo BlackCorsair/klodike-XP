@@ -1,4 +1,4 @@
-from cardStack import CardStack
+from klondike.cardStack import CardStack
 
 
 class Stock(CardStack):
