@@ -9,13 +9,12 @@ class Foundation(CardStack):
     def isComplete(self):
         if self.empty():
             return False
-        if self.peek().getNumber().value != 1:
+        if self.peek().getNumber().value != 13:
             return False
         return True
 
     def fitsIn(self, card):
         if self.isComplete():
-            print("I'm complete!")
             return False
         if card.getSuit() != self.suit:
             return False

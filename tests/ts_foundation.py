@@ -13,7 +13,7 @@ class TestFoundation(unittest.TestCase):
         self.foundationSUT = None
 
     def testIsCompleteTrue(self):
-        self.foundationSUT.push(CardBuilder().setNumber(Number.ACE).build())
+        self.foundationSUT.push(CardBuilder().setNumber(Number.KING).build())
         self.assertTrue(self.foundationSUT.isComplete())
 
     def testIsCompleteFalse(self):
@@ -23,6 +23,12 @@ class TestFoundation(unittest.TestCase):
         self.assertFalse(self.foundationSUT.fitsIn(
             CardBuilder().setSuit(SuitBuilder().
                                   setInitial('h').build()).build()))
+
+    def testFitsInFalseButIsComplete(self):
+        self.foundationSUT.push(CardBuilder().setNumber(Number.KING).build())
+        self.assertFalse(self.foundationSUT.fitsIn(CardBuilder()
+                                                   .setSuit(SuitBuilder()
+                                                            .build()).build()))
 
     def testFitsInTrueStockEmptyAndCardIsSameSuit(self):
         self.assertTrue(self.foundationSUT.fitsIn(CardBuilder().build()))

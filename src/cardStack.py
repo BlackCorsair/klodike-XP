@@ -5,7 +5,10 @@ class CardStack:
     def pop(self):
         if self.empty():
             return None
-        return self.cards.pop()
+        cardToReturn = self.cards.pop()
+        if not self.empty() and not self.cards[-1].isFacedUp():
+            self.cards[-1].flip()
+        return cardToReturn
 
     def push(self, card):
         self.cards.append(card)
