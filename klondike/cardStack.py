@@ -1,3 +1,4 @@
+# WRONGLY DONE, BUT KEPT FOR LEARNING PURPOSES
 class CardStack:
     def __init__(self):
         self.cards = []
