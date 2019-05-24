@@ -1,4 +1,6 @@
 # Klondike-XP
+## Repository
+https://github.com/BlackCorsair/klondike-XP
 
 ## REQUIREMENTS
 * Python3
