@@ -1,4 +1,4 @@
-from stock import Stock
+from klondike.stock import Stock
 from cardBuilder import CardBuilder
 
 

@@ -1,6 +1,6 @@
 import unittest
-from number import Number
-from foundation import Foundation
+from klondike.number import Number
+from klondike.foundation import Foundation
 from suitBuilder import SuitBuilder
 from cardBuilder import CardBuilder
 

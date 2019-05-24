@@ -1,4 +1,4 @@
-from pile import Pile
+from klondike.pile import Pile
 from cardBuilder import CardBuilder
 
 

@@ -1,4 +1,4 @@
-from game import Game
+from klondike.game import Game
 
 
 class GameBuilder():

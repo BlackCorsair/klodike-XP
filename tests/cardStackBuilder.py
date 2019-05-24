@@ -1,5 +1,5 @@
 from cardBuilder import CardBuilder
-from cardStack import CardStack
+from klondike.cardStack import CardStack
 
 
 class CardStackBuilder():

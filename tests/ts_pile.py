@@ -3,7 +3,7 @@ import pytest
 from pileBuilder import PileBuilder
 from cardBuilder import CardBuilder
 from suitBuilder import SuitBuilder
-from number import Number
+from klondike.number import Number
 
 
 class TestPile(unittest.TestCase):

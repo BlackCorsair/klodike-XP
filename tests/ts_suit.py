@@ -1,6 +1,6 @@
 import unittest
-from suit import Suit
-from color import Color
+from klondike.suit import Suit
+from klondike.color import Color
 
 
 class TestSuit(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from number import Number
+from klondike.number import Number
 from cardBuilder import CardBuilder
 
 

@@ -1,5 +1,5 @@
-from color import Color
-from suit import Suit
+from klondike.color import Color
+from klondike.suit import Suit
 
 
 class SuitBuilder():

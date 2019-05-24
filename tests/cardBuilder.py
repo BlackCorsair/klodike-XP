@@ -1,7 +1,7 @@
-from suit import Suit
-from number import Number
-from color import Color
-from card import Card
+from klondike.suit import Suit
+from klondike.number import Number
+from klondike.color import Color
+from klondike.card import Card
 
 
 class CardBuilder():
